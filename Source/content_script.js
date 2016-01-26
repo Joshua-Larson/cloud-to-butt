@@ -5,6 +5,9 @@ function walk(node)
 	// I stole this function from here:
 	// http://is.gd/mwZp7E
 	
+	// I stole this extension from the creator of 
+	//cloud-to-butt but it's on github so it's chill
+	
 	var child, next;
 
 	switch ( node.nodeType )  
@@ -31,10 +34,7 @@ function handleText(textNode)
 {
 	var v = textNode.nodeValue;
 
-	v = v.replace(/\bThe Cloud\b/g, "My Butt");
-	v = v.replace(/\bThe cloud\b/g, "My butt");
-	v = v.replace(/\bthe Cloud\b/g, "my Butt");
-	v = v.replace(/\bthe cloud\b/g, "my butt");
+	v = v.replace(/[Ss][Oo],?.*[Ll]et?'s\s[Nn]ot\s[Mm]eet\b/g, "---");
 	
 	textNode.nodeValue = v;
 }
