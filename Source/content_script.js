@@ -34,7 +34,7 @@ function handleText(textNode)
 {
 	var v = textNode.nodeValue;
 
-	v = v.replace(/[Ss][Oo],?.*[Ll]et?'s\s[Nn]ot\s[Mm]eet\b/g, "---");
+	v = v.replace(/[Ss][Oo],?.*[Ll]et'?s\s[Nn]ot\s[Mm]eet\b/g, "---");
 	
 	textNode.nodeValue = v;
 }
